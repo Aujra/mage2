@@ -1,0 +1,9 @@
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$productCollection = $objectManager->create('Kind\Ingreidents\Model\ResourceModel\Ingredient\Collection');
+$productCollection->load();
+foreach ($productCollection as $p) : ?>
+<h3><?= $p->getName() ?></h3>
+    <div><?= $p->getContent() ?></div>
+    <?= $p->getImages() ?>
+<?php endforeach; ?>

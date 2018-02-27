@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Kind::top_level" module="Kind_Ingreidents" resource="Magento_Backend::content" sortOrder="9999" title="Kind"/>
+		<add action="kind_ingreidents/ingredient/index" id="Kind::kind_ingreidents_ingredient" module="Kind_Ingreidents" parent="Kind::top_level" resource="Magento_Backend::content" sortOrder="9999" title="Ingredient"/>
+	</menu>
+</config>

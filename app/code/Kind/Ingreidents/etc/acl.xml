@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Kind_Ingreidents::Ingredient" sortOrder="10" title="Ingredient">
+					<resource id="Kind_Ingreidents::Ingredient_save" sortOrder="10" title="Save Ingredient"/>
+					<resource id="Kind_Ingreidents::Ingredient_delete" sortOrder="20" title="Delete Ingredient"/>
+					<resource id="Kind_Ingreidents::Ingredient_update" sortOrder="30" title="Update Ingredient"/>
+					<resource id="Kind_Ingreidents::Ingredient_view" sortOrder="40" title="View Ingredient"/>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

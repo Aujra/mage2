@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="salesforce" sortOrder="500">
+            <label>Salesforce</label>
+        </tab>
+        <section id="marketingcloud" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Marketing Cloud</label>
+            <tab>salesforce</tab>
+            <resource>Kind_Salesforce::marketingcloud</resource>
+            <group id="general" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Credentials</label>
+                <field id="api_user" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Api User</label>
+                    <comment>Username for logging into marketing cloud</comment>
+                </field>
+                <field id="api_pass" type="password" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Api Password</label>
+                    <comment>Password for logging into marketing cloud</comment>
+                </field>
+                <field id="api_key" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Api Key</label>
+                    <comment>Api Key from marketing cloud</comment>
+                </field>
+                <field id="api_secret" type="password" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Api Secret</label>
+                    <comment>Api Secret marketing cloud</comment>
+                </field>
+                <field id="test_button" type="button" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Kind\Salesforce\Block\System\Config\TestApiButton</frontend_model>
+                    <label>Test Api Credentials</label>
+                </field>
+            </group>
+            <group id="lists" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>List</label>
+                <field id="list_id" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Data Extension List Id</label>
+                    <comment>External Key from Data Extension</comment>
+                </field>
+                <field id="journey_id" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Journey Id</label>
+                    <comment>External Key from Journey</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

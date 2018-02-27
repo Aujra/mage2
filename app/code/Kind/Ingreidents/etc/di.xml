@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Kind\Ingreidents\Api\IngredientRepositoryInterface" type="Kind\Ingreidents\Model\IngredientRepository"/>
+	<preference for="Kind\Ingreidents\Api\Data\IngredientInterface" type="Kind\Ingreidents\Model\Ingredient"/>
+	<preference for="Kind\Ingreidents\Api\Data\IngredientSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Kind\Ingreidents\Model\ResourceModel\Ingredient\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">kind_ingreidents_ingredient</argument>
+			<argument name="resourceModel" xsi:type="string">Kind\Ingreidents\Model\ResourceModel\Ingredient\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="kind_ingreidents_ingredient_grid_data_source" xsi:type="string">Kind\Ingreidents\Model\ResourceModel\Ingredient\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

@@ -1,0 +1,21 @@
+{
+    "name": "kind/module-ingreidents",
+    "description": "Kind Ingredients Module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "info@mage2gen.com",
+            "name": "Mage2Gen"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Kind\\Ingreidents\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
